@@ -11,6 +11,10 @@ class Prakriti extends StatefulWidget {
 class _PrakritiState extends State<Prakriti> {
   @override
   String result = "";
+  String url = "";
+  String QueryText = "Query";
+  var Data;
+
   Widget build(BuildContext context) {
     if (globals.vata_score > globals.kapha_score) {
       if (globals.pitta_score > globals.vata_score) {
@@ -28,12 +32,10 @@ class _PrakritiState extends State<Prakriti> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'PhenoTypeTech  -  Know Your Prakriti',textAlign: TextAlign.center,
+          'PhenoTypeTech  -  Know Your Prakriti',
+          textAlign: TextAlign.center,
           style: TextStyle(
-            color: Colors.white,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold
-          ),
+              color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),
         ),
         backgroundColor: Colors.blueGrey,
       ),
@@ -86,12 +88,12 @@ class _PrakritiState extends State<Prakriti> {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color.fromARGB(255, 240, 158, 84),
+                      backgroundColor: const Color.fromARGB(255, 240, 158, 84),
                     ),
                     onPressed: () {
                       if (result == "KAPHA") {
@@ -113,7 +115,24 @@ class _PrakritiState extends State<Prakriti> {
                       ),
                     ),
                   ),
-                ],
+                  
+                  SizedBox(height: 100,),
+                  
+                  Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: TextField(
+                      
+                      decoration: InputDecoration(
+                          hintText: "Search Anything here",
+                          suffixIcon: GestureDetector(
+                            
+                              
+                            child: const Icon(Icons.search),
+                          )),
+                    ),
+                  ),
+                  
+                ]
               ),
             ),
           ),

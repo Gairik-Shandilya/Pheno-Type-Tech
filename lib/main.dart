@@ -1,22 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:prakriti_finder/DietKapha.dart';
-import 'package:prakriti_finder/DietPitta.dart';
-import 'package:prakriti_finder/DietVata.dart';
+import 'package:prakriti_finder/Diet/DietKapha.dart';
+import 'package:prakriti_finder/Diet/DietPitta.dart';
+import 'package:prakriti_finder/Diet/DietVata.dart';
 import 'package:prakriti_finder/Prakriti.dart';
-import 'package:prakriti_finder/YogaKapha.dart';
-import 'package:prakriti_finder/YogaPitta.dart';
-import 'package:prakriti_finder/YogaVata.dart';
-import 'package:prakriti_finder/optionbrain.dart';
-import 'package:prakriti_finder/quizPage.dart';
-import 'package:prakriti_finder/quizbrain.dart';
-
+import 'package:prakriti_finder/Yoga/YogaKapha.dart';
+import 'package:prakriti_finder/Yoga/YogaPitta.dart';
+import 'package:prakriti_finder/Yoga/YogaVata.dart';
+import 'package:prakriti_finder/Quiz/optionbrain.dart';
+import 'package:prakriti_finder/Quiz/quizPage.dart';
+import 'package:prakriti_finder/Quiz/quizbrain.dart';
+import 'package:prakriti_finder/Bot.dart';
 
 QuizBrain quizBrain = QuizBrain();
 OptionBrain optionBrain = OptionBrain();
 Quizzler quizzler = Quizzler();
 void main() => runApp(const Quizzler());
 
-class Quizzler extends StatelessWidget {
+class Quizzler extends StatelessWidget { 
   const Quizzler({super.key});
 
   @override
@@ -26,32 +26,32 @@ class Quizzler extends StatelessWidget {
       routes: {
         "prakriti": (context) => const Prakriti(),
         "dietkapha": (context) => DietKapha(),
-        "dietvata":(context) => DietVata(),
-        "dietpitta":(context) => DietPitta(),
+        "dietvata": (context) => DietVata(),
+        "dietpitta": (context) => DietPitta(),
         "yogakapha": (context) => YogaKapha(),
-        "yogavata":(context) => YogaVata(),
-        "yogapitta":(context) => YogaPitta(),
+        "yogavata": (context) => YogaVata(),
+        "yogapitta": (context) => YogaPitta(),
+        "bot":(context) => Bot(),
       },
       home: Scaffold(
         appBar: AppBar(
-          title: const Center(
-            child: Text(
-              'PhenoTypeTech  -  Know Your Prakriti',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold,
-                fontFamily: 'SourceSansPro',
+            title: Center(
+              child: Text(
+                'PhenoTypeTech  -  Know your prakriti',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22.0,
+                  fontWeight: FontWeight.bold,
+                  fontFamily: 'SourceSansPro',
+                ),
               ),
             ),
-          ),
-          backgroundColor: Colors.blueGrey
-        ),
+            backgroundColor: Colors.blueGrey),
         backgroundColor: Color.fromARGB(255, 214, 204, 198),
         body: const SafeArea(
           child: Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 10.0),
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
             child: QuizPage(),
           ),
         ),
@@ -59,4 +59,3 @@ class Quizzler extends StatelessWidget {
     );
   }
 }
-

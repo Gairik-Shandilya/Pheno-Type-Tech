@@ -1,4 +1,4 @@
-import 'package:prakriti_finder/question.dart';
+import 'package:prakriti_finder/Quiz/question.dart';
 class QuizBrain {
   List<Question> questionlist = [
     Question('Body Frame'),

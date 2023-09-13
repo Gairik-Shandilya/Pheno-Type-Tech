@@ -1,4 +1,4 @@
-import 'globals.dart' as globals;
+import '../globals.dart' as globals;
 import 'package:flutter/material.dart';
 import 'package:prakriti_finder/main.dart';
 

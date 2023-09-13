@@ -1,4 +1,4 @@
-import 'package:prakriti_finder/option.dart';
+import 'package:prakriti_finder/Quiz/option.dart';
 
 class OptionBrain {
   List<Option> optionlist = [
