@@ -1,50 +1,35 @@
-
 import 'package:flutter/material.dart';
-
 
 class YogaPitta extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    
-    return SafeArea(
-      child: Scaffold(
-        backgroundColor: Colors.grey.shade900,
-        
-          appBar: AppBar(
-            title: Text('Yoga for Pitta'),
-            backgroundColor:  Colors.blueGrey,
-          ),
-          body: SingleChildScrollView(
-            
-            child: Center(
-              child: Column(children: <Widget>[
-              SizedBox(height: 10,),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset("assets/Badhakonasana.jpg"),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Yoga Poses - Pitta'),
+        backgroundColor: Colors.orange,
+      ),
+      body: Container(
+        padding: EdgeInsets.all(16.0),
+        color: Colors.orange[50],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Recommended Yoga Poses:',
+              style: TextStyle(
+                fontSize: 22.0,
+                fontWeight: FontWeight.bold,
+                color: Colors.orange[800],
               ),
-              
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset("assets/Sarvangasana.jpg"),
-              ),
-              
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset("assets/Sukhasana-easy.jpg"),
-              ),
-              
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Image.asset("assets/Bandhasana.jpg"),
-              ),
-              
-              
-                    ]),
             ),
-          )
-          
+            SizedBox(height: 10.0),
+            Text(
+              '• Forward bends\n• Twists\n• Cooling pranayama\n• Meditation and relaxation',
+              style: TextStyle(fontSize: 18.0),
+            ),
+          ],
         ),
+      ),
     );
   }
 }
