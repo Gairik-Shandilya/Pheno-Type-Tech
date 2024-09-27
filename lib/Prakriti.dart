@@ -12,7 +12,7 @@ class _PrakritiState extends State<Prakriti> {
   @override
   String result = "";
   String url = "";
-  String QueryText = "Query";
+  String QueryText = "InitialQuery";
   var Data;
 
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class _PrakritiState extends State<Prakriti> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'PhenoTypeTech  -  Know Your Prakriti',
+          'PhenoTypeTech - Know Your Prakriti',
           textAlign: TextAlign.center,
           style: TextStyle(
               color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold),
